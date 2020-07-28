@@ -18,19 +18,21 @@
             @yield('content')
         </div>
 
-        <section class="hero is-dark">
-            <div class="hero-body has-text-centered">
-                <p>Author</p>
-                <a href="https://twitter.com/AlexSmudgee" target="_blank">
-                    @AlexSmudgee
-                </a>
+        <section class="hero is-light">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <p>This is a bespoke, fan made project with no intention of producing revenue.</p>
+                    <p>I do not own any of the sounds used. All sounds extracted from <a href="https://www.youtube.com/user/LZBMX" target="_blank">AdamLZ</a> YouTube channel.</p>
+                    <br />
+                    <p>Check out the code on <a href="https://github.com/ohori/lzmfg-soundboard" target="_blank">GitHub</a></p>
+                    <p class="subtitle">
+                        <a class="has-text-info" href="https://twitter.com/AlexSmudgee" target="_blank">
+                            @AlexSmudgee
+                        </a>
+                    </p>
+                </div>
             </div>
         </section>
 
-        {{-- <div class="has-text-centered">
-            <a href="https://twitter.com/AlexSmudgee" target="_blank">
-                @AlexSmudgee
-            </a>
-        </div> --}}
     </body>
 </html>

@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Http\Request;
+
+use App\Submission;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    use AuthorizesRequests, ValidatesRequests;
 
     function index()
     {
@@ -23,6 +25,11 @@ class Controller extends BaseController
                         'id' => 'coffee',
                         'name' => 'Coffee',
                         'file' => 'adam/coffee.mp3'
+                    ],
+                    [
+                        'id' => 'mhmm',
+                        'name' => 'Mhmm',
+                        'file' => 'adam/mhmm.mp3'
                     ],
                     [
                         'id' => 'lay_the_pipe',
@@ -86,5 +93,32 @@ class Controller extends BaseController
         $crew = json_decode(json_encode($crew));
 
         return view('index')->with('crew', $crew);
+    }
+
+    function SubmitSoundPage()
+    {
+        return view('submit_a_sound');
+    }
+
+    function SubmitSound(Request $request)
+    {
+        $validatedData = $request->validate([
+            'member' => ['required'],
+            'youtube_url' => ['required'],
+            'time_stamp' => ['required']
+        ]);
+
+        $submission = new Submission();
+
+        $submission->member = $request->member;
+        $submission->youtube_url = $request->youtube_url;
+        $submission->time_stamp = $request->time_stamp;
+        $submission->additional_comments = $request->additional_comments;
+        $submission->social_media = $request->social_media;
+        $submission->username = $request->username;
+
+        $submission->save();
+
+        return view('submit_a_sound')->with('success', true);
     }
 }

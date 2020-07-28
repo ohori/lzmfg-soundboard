@@ -1,21 +1,22 @@
 @import "~bulma/bulma.sass";
 @import "animations/bounce.scss";
+@import "~font-awesome/scss/font-awesome.scss";
 
 .title-font {
     font-size: 77px;
     font-family: 'Cairo', sans-serif;
     font-weight: bold;
+}
 
-    .green {
+.green {
         color: #66ccb7;
-    }
+}
 
-    .pink {
-        color: white;
-        background-color: #f2bfc8;
-        line-height: 0.95em;
-        display: inline-block;
-    }
+.pink {
+    color: white;
+    background-color: #f2bfc8;
+    line-height: 0.95em;
+    display: inline-block;
 }
 
 .male {
@@ -24,4 +25,21 @@
 
 .female {
     color: #f2bfc8;
+}
+
+.remove-top-bottom-spacing {
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.remove-bottom-spacing {
+    padding-bottom: 0;
+    margin-bottom: 0
+}
+
+.hide-top-hr {
+    opacity: 0;
+    margin-top: 0
 }

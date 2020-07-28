@@ -14,3 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'Controller@Index')->name('index');
+
+Route::get('/submit-a-sound', 'Controller@SubmitSoundPage')->name('submit-a-sound');
+Route::post('/submit-a-sound', 'Controller@SubmitSound');
