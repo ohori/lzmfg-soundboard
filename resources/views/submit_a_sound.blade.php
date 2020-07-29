@@ -47,7 +47,7 @@
                 <div class="field">
                     <label class="label">Crew Member</label>
                     <div class="control">
-                        <input name="member" class="input" type="text" placeholder="E.g. Adam / Alberto / Collete">
+                        <input name="member" class="input" type="text" placeholder="E.g. Adam / Alberto">
                     </div>
                 </div>
             </div>
@@ -108,5 +108,5 @@
 </div>
 
 <div class="has-text-centered">
-    <a href="{{ Route('index') }}"><i class="fa fa-arrow-left"></i> Back to Soundboard</a>
+    <a class="button" href="{{ Route('index') }}">Back to Soundboard</a>
 </div>
