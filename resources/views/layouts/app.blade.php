@@ -12,11 +12,16 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
 
+        <meta name="title" content="LZMFG Soundboard">
+        <meta name="description" content="A bespoke soundboard with all your favourite LZMFG sound bites.">
+
         {{-- Facebook Meta Tags --}}
         <meta property="og:title" content="LZMFG Soundboard" />
         <meta property="og:description" content="A bespoke soundboard with all your favourite LZMFG sound bites." />
         <meta property="og:image" content="{{ url('/images/favicon.png') }}" />
         <meta property="og:type" content="website" />
+
+        <meta name="robots" content="index, follow" />
     </head>
     <body>
 
