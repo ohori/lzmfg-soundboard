@@ -35,54 +35,56 @@
     </div>
 </section>
 
-<div class="columns is-multiline is-mobile">
-    @foreach($crew as $member)
-        <div class="column is-full">
-            @if($loop->iteration === 1)
-                <hr class="hide-top-hr" />
-            @endif
-            <div class="columns is-vcentered">
-                <div class="column is-one-quarter has-text-centered">
-                    <p class="subtitle is-1 is-paddingless is-marginless {{ $member->gender == "male" ? "male" : "female" }}">
-                        {{ $member->name }}
-                    </p>
-                    <img width="250" src="{{ url('images/crew/' . $member->avatar . '') }}"/>
-                </div>
-                <div class="column">
-                    <div class="columns is-multiline is-mobile">
-                        @if($member->sounds)
-                            @foreach($member->sounds as $sound)
+<div class="section remove-top-bottom-spacing">
+    <div class="columns is-multiline is-mobile">
+        @foreach($crew as $member)
+            <div class="column is-full">
+                @if($loop->iteration === 1)
+                    <hr class="hide-top-hr" />
+                @endif
+                <div class="columns is-vcentered">
+                    <div class="column is-one-quarter has-text-centered">
+                        <p class="subtitle is-1 is-paddingless is-marginless {{ $member->gender == "male" ? "male" : "female" }}">
+                            {{ $member->name }}
+                        </p>
+                        <img width="250" src="{{ url('images/crew/' . $member->avatar . '') }}"/>
+                    </div>
+                    <div class="column">
+                        <div class="columns is-multiline is-mobile">
+                            @if($member->sounds)
+                                @foreach($member->sounds as $sound)
+                                    <div class="column is-one-third-desktop is-half-tablet has-text-centered">
+                                        <div class="section remove-top-bottom-spacing">
+                                            <br />
+                                            <audio id="{{ $sound->id }}">
+                                                <source src="{{ url('sounds/crew/'. $sound->file . '') }}" type="audio/mpeg">
+                                                Your browser does not support the audio element.
+                                            </audio>
+
+                                            <p class="subtitle has-text-grey">{{ $sound->name }}</p>
+
+                                            <button class="button is-large is-fullwidth is-primary is-outlined" onclick="PlaySound('{{ $sound->id }}')" type="button">
+                                                <i class="fa fa-play"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            @else
                                 <div class="column is-one-third-desktop is-half-tablet has-text-centered">
-                                    <div class="section remove-top-bottom-spacing">
-                                        <br />
-                                        <audio id="{{ $sound->id }}">
-                                            <source src="{{ url('sounds/crew/'. $sound->file . '') }}" type="audio/mpeg">
-                                            Your browser does not support the audio element.
-                                        </audio>
-
-                                        <p class="subtitle has-text-grey">{{ $sound->name }}</p>
-
-                                        <button class="button is-large is-fullwidth is-primary is-outlined" onclick="PlaySound('{{ $sound->id }}')" type="button">
-                                            <i class="fa fa-play"></i>
-                                        </button>
+                                    <div class="has-text-centered">
+                                        <p class="subtitle has-text-grey">Coming soon...</p>
                                     </div>
                                 </div>
-                            @endforeach
-                        @else
-                            <div class="column is-one-third-desktop is-half-tablet has-text-centered">
-                                <div class="has-text-centered">
-                                    <p class="subtitle has-text-grey">Coming soon...</p>
-                                </div>
-                            </div>
-                        @endif
+                            @endif
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        <hr class="remove-bottom-spacing" />
+            <hr class="remove-bottom-spacing" />
 
+        </div>
+        @endforeach
     </div>
-    @endforeach
 </div>
 
 <section class="hero">

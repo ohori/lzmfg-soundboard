@@ -8,15 +8,13 @@
 
         <title>LZMFG Soundboard</title>
 
-
         <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
 
         <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="content">
-            @yield('content')
-        </div>
+
+        @yield('content')
 
         <section class="hero is-light">
             <div class="hero-body">
