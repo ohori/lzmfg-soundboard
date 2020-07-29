@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
-<section class="hero is-fullheight is-dark">
+<section class="hero is-dark is-fullheight">
     <div class="hero-body">
         <div class="container has-text-centered">
 
-            <img src="{{ url('/images/logo.png') }}" width="500" />
+            <img src="{{ url('/images/logo.png') }}" alt="LZMFG Logo" width="500" />
 
             <p class="title-font">
-                <span class="green">SOUND</span><span class="pink">BOARD</span>
+                <span class="green">SOUND</span>
+                <span class="pink">BOARD</span>
             </p>
 
             <p class="subtitle is-1 animated bounce">⌄</p>

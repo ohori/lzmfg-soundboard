@@ -1,19 +1,27 @@
 @import "~bulma/bulma.sass";
-@import "animations/bounce.scss";
 @import "~font-awesome/scss/font-awesome.scss";
+@import "animations/bounce.scss";
+@import "helpers/spacing.scss";
+@import "helpers/spacing.scss";
 
 .title-font {
-    font-size: 77px;
+    font-size: 13vw;
     font-family: 'Cairo', sans-serif;
     font-weight: bold;
 }
 
+@media screen and (min-width: 549px) {
+    .title-font {
+        font-size: 77px;
+    }
+}
+
 .green {
-        color: #66ccb7;
+    color: #66ccb7;
 }
 
 .pink {
-    color: white;
+    color: #363636;
     background-color: #f2bfc8;
     line-height: 0.95em;
     display: inline-block;
@@ -25,21 +33,4 @@
 
 .female {
     color: #f2bfc8;
-}
-
-.remove-top-bottom-spacing {
-    padding-top: 0;
-    margin-top: 0;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.remove-bottom-spacing {
-    padding-bottom: 0;
-    margin-bottom: 0
-}
-
-.hide-top-hr {
-    opacity: 0;
-    margin-top: 0
 }
