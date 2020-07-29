@@ -11,6 +11,7 @@
                 <h1 class="title">Submit a Sound</h1>
                 <h2 class="title is-6 has-text-grey">Have a sound byte from a YouTube video? Send it below!</h2>
                 <hr />
+                <p class="has-text-grey">If anyone from LZMFG want to send me sounds bites, please send me a message on twitter. My @ is in the footer.</p>
             </div>
 
             @if(@$success)
