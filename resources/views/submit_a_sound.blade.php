@@ -105,8 +105,8 @@
         </div>
     </form>
 
-</div>
+    <div class="section has-text-centered remove-bottom-spacing">
+        <a class="button" href="{{ Route('index') }}">Back to Soundboard</a>
+    </div>
 
-<div class="has-text-centered">
-    <a class="button" href="{{ Route('index') }}">Back to Soundboard</a>
 </div>
