@@ -44,7 +44,7 @@
                 </div>
             @endif
 
-            <div class="column is-half is-offset-one-quarter">
+            <div class="column is-half-tablet is-offset-one-quarter-tablet is-10-mobile is-offset-1-mobile">
                 <div class="field">
                     <label class="label">Crew Member</label>
                     <div class="control">
@@ -53,7 +53,7 @@
                 </div>
             </div>
 
-            <div class="column is-one-third-tablet is-half-mobile is-offset-one-quarter">
+            <div class="column is-one-third-tablet is-offset-one-quarter-tablet is-10-mobile is-offset-1-mobile">
                 <div class="field">
                         <label class="label">YouTube URL</label>
                         <div class="control">
@@ -62,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="column is-2-tablet is-half-mobile is-offset-one-quarter-mobile">
+            <div class="column is-2-tablet is-10-mobile is-offset-1-mobile">
                 <div class="field">
                     <label class="label">Time Stamp</label>
                     <div class="control">
@@ -71,11 +71,11 @@
                 </div>
             </div>
 
-            <div class="column is-half is-offset-one-quarter has-text-centered">
+            <div class="column has-text-centered is-half-tablet is-offset-one-quarter-tablet is-10-mobile is-offset-1-mobile">
                 <textarea name="additional_comments" class="textarea" placeholder="Any additional comments..."></textarea>
             </div>
 
-            <div class="column is-2-tablet is-half-mobile is-offset-one-quarter">
+            <div class="column is-2-tablet is-offset-one-quarter-tablet is-10-mobile is-offset-1-mobile">
                 <div class="field">
                     <div class="control">
                         <div class="select is-fullwidth">
@@ -90,7 +90,7 @@
                 </div>
             </div>
 
-            <div class="column is-4-tablet is-half-mobile is-offset-one-quarter-mobile">
+            <div class="column is-4-tablet is-10-mobile is-offset-1-mobile">
                 <div class="field">
                     <div class="control">
                         <input name="username" class="input" type="text" placeholder="@YourSocialHere">
@@ -99,7 +99,7 @@
                 </div>
             </div>
 
-            <div class="column is-half is-offset-one-quarter">
+            <div class="column is-half-tablet is-offset-one-quarter-tablet is-10-mobile is-offset-1-mobile">
                 <button type="submit" class="button is-fullwidth is-primary is-medium">Submit</button>
             </div>
 
